@@ -61,3 +61,14 @@ print(score2)
 # problem, especially the more code-golf-y ones. That's where the real excitement lies. But personally, for
 # a casual first timer, I'm satisfied with simply having got the answer. And what do they say about good coders?
 # Laziness is a virtue.
+
+# Update: I did see a clever solution I really liked:
+arr1 = ["", "B X", "C Y", "A Z", "A X", "B Y", "C Z", "C X", "A Y", "B Z"]
+arr2 = ["", "B X", "C X", "A X", "A Y", "B Y", "C Y", "C Z", "A Z", "B Z"]
+# with these two arrays, the index of each string corresponds to the score value of that string. I did notice that
+# scores were sequential and unique in my lookup tables, but I didn't think to encode it in such a concise manner.
+# Is this practical in the real world? Probably not. An array like this is pretty low on semantic context to inform
+# future readers of what its contents mean, and to be forward looking you'd have to be very confident that you won't
+# have a future extension of the game that invalidates the constraints of uniqueness and completeness. Still, a
+# very slick solution that compacts all the necessary information into a simpler data structure, and also
+# reveals an interesting relationship between the two arrangements of scores.
