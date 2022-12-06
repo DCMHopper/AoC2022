@@ -7,7 +7,7 @@
 # Part 1: Calculate total score
 
 # if you didn't want me to hard code a dictionary, you shouldn't have made it only 9 entries :P
-scoreDict = {
+score_table = {
     "A X": 4,
     "A Y": 8,
     "A Z": 3,
@@ -26,14 +26,14 @@ f.close()
 score: int = 0
 for line in lines:
     # we can aggregate the score with a dictionary lookup inside a one-liner
-    score += int(scoreDict[line.strip()])
+    score += int(score_table[line.strip()])
 
 print(score)
 
 # Part 2: calculate score by outcome
 
 # again, it's just too easy to hardcode the "challenging" part of this problem
-scoreDict2 = {
+score_table2 = {
     "A X": 3,
     "A Y": 4,
     "A Z": 8,
@@ -47,7 +47,7 @@ scoreDict2 = {
 
 score2: int = 0
 for line in lines:
-    score2 += int(scoreDict2[line.strip()])
+    score2 += int(score_table2[line.strip()])
 
 print(score2)
 
